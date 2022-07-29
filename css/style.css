@@ -874,6 +874,17 @@ form label {
     font-size: 16px;
   }
 }
+
+.btn  {
+  padding: 15px 20px;
+  background: #fff !important;
+  color: #F14E95;
+  border: none !important;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+
 #fh5co-header .display-tc .btn,
 #fh5co-counter .display-tc .btn,
 .fh5co-cover .display-tc .btn {
