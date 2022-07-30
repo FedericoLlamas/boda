@@ -884,6 +884,16 @@ form label {
   text-transform: uppercase;
 }
 
+.btn2  {
+  padding: 15px 20px;
+  background: #0e0e0e !important;
+  color: #F14E95;
+  border: none !important;
+  border-radius: 30px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
 
 #fh5co-header .display-tc .btn,
 #fh5co-counter .display-tc .btn,
