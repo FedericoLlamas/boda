@@ -1659,11 +1659,11 @@ form label {
   z-index: 2001;
   border-bottom: none !important;
 }
-@media screen and (max-width: 768px) {
+/*@media screen and (max-width: 768px) {
   .fh5co-nav-toggle {
     display: block;
   }
-}
+}*/
 
 .btn {
   margin-right: 4px;
