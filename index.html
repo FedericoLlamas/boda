@@ -210,7 +210,18 @@
 			        <h4 class="modal-title">Modal Header</h4>
 			      </div>
 			      <div class="modal-body">
-			        <p>Some text in the modal.</p>
+					<p id="p1" class="content" >123182390123123</p>
+					<div class="button-tooltip-container">
+					    <button title="copy share link" type="submit" value="copy" onclick="copy('#p1');" class=copybutton>
+					    	<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16" style="cursor:pointer">
+							<path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+							<path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+						</svg>
+					    </button>
+					    <span id="custom-tooltip">Copiado!</sapn>
+					</div>
+					<textarea class=visuallyhidden id="box"></textarea>
+
 			      </div>
 			      <div class="modal-footer">
 			        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -281,23 +292,38 @@
 	<script src="js/main.js"></script>
 
 	<script>
-    simplyCountdown('.simply-countdown-one', {
-        year: 2022,
-        month: 10,
-        day: 15,
-        hours: 16,
-        minutes: 30
-    });
+	    simplyCountdown('.simply-countdown-one', {
+	        year: 2022,
+	        month: 10,
+	        day: 15,
+	        hours: 16,
+	        minutes: 30
+	    });
 
 
-    //jQuery example
-    $('#simply-countdown-losange').simplyCountdown({
-        year: d.getFullYear(),
-        month: d.getMonth() + 1,
-        day: d.getDate(),
-        enableUtc: false
-    });
-</script>
+	    //jQuery example
+	    $('#simply-countdown-losange').simplyCountdown({
+	        year: d.getFullYear(),
+	        month: d.getMonth() + 1,
+	        day: d.getDate(),
+	        enableUtc: false
+	    })
+
+		function copy(element){
+		   	var $temp = $("<input>");
+		    $("body").append($temp);
+		    $temp.val($(element).text()).select();
+		    document.execCommand("copy");
+		    document.getElementById("custom-tooltip").style.display = "inline";
+		    setTimeout( function() {
+		        document.getElementById("custom-tooltip").style.display = "none";
+		    }, 1000);
+		};
+
+
+
+
+	</script>
 
 	</body>
 </html>
